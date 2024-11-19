@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factory Progression</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="factory-header">
+        <h1>Welcome to the Factory</h1>
+        <p>Unlock stages as you progress through the quiz and tasks!</p>
+    </header>
+    
+    <main>
+        <!-- Factory Stages -->
+        <section class="stages">
+            <div id="stage1" class="stage unlocked">
+                <h2>Stage 1: Raw Materials</h2>
+                <button onclick="startQuiz()">Start Quiz</button>
+            </div>
+            <div id="stage2" class="stage locked">
+                <h2>Stage 2: Assembly</h2>
+                <p>Complete the previous stage to unlock.</p>
+            </div>
+            <div id="stage3" class="stage locked">
+                <h2>Stage 3: Quality Check</h2>
+                <p>Complete the previous stage to unlock.</p>
+            </div>
+        </section>
+
+        <!-- Quiz Section -->
+        <section id="quiz-section" class="hidden">
+            <h2>Quiz</h2>
+            <p>Answer the question correctly to progress to the next stage!</p>
+            <div id="quiz-container">
+                <p>What is 2 + 2?</p>
+                <input type="text" id="quiz-answer" placeholder="Your answer">
+                <button id="submit-answer" onclick="checkAnswer()">Submit</button>
+                <button id="retry" class="hidden" onclick="retryQuiz()">Retry</button>
+                <button id="next-stage" class="hidden" onclick="unlockNextStage()">Next Stage</button>
+            </div>
+            <p id="feedback"></p>
+        </section>
+    </main>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
