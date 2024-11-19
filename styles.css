@@ -3,44 +3,42 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #1e1e2f;
-    color: #fff;
+    background: #202020 url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #ffffff;
 }
 
-.factory-header {
+header {
     text-align: center;
-    background-color: #333;
     padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
 }
 
-.stages {
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
+h1 {
+    font-size: 2.5em;
 }
 
-.stage {
-    background-color: #444;
+h2 {
+    margin-top: 20px;
+}
+
+#quiz-section {
+    margin: 20px auto;
     padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #000;
     border-radius: 8px;
+    max-width: 600px;
     text-align: center;
-    width: 30%;
-}
-
-.stage.locked {
-    opacity: 0.5;
-}
-
-.hidden {
-    display: none;
 }
 
 button {
-    background-color: #007bff;
-    color: white;
+    margin: 10px;
     padding: 10px 20px;
     border: none;
-    border-radius: 4px;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
     cursor: pointer;
 }
 

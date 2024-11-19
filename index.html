@@ -4,47 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Factory Progression</title>
+    <title>Cerveza Sour de Jamaica</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="factory-header">
-        <h1>Welcome to the Factory</h1>
-        <p>Unlock stages as you progress through the quiz and tasks!</p>
-    </header>
-    
-    <main>
-        <!-- Factory Stages -->
-        <section class="stages">
-            <div id="stage1" class="stage unlocked">
-                <h2>Stage 1: Raw Materials</h2>
-                <button onclick="startQuiz()">Start Quiz</button>
-            </div>
-            <div id="stage2" class="stage locked">
-                <h2>Stage 2: Assembly</h2>
-                <p>Complete the previous stage to unlock.</p>
-            </div>
-            <div id="stage3" class="stage locked">
-                <h2>Stage 3: Quality Check</h2>
-                <p>Complete the previous stage to unlock.</p>
-            </div>
-        </section>
+    <div class="background">
+        <header>
+            <h1>Cerveza Sour de Jamaica</h1>
+            <p>Explora cómo se elabora nuestra cerveza artesanal</p>
+        </header>
 
-        <!-- Quiz Section -->
-        <section id="quiz-section" class="hidden">
-            <h2>Quiz</h2>
-            <p>Answer the question correctly to progress to the next stage!</p>
+        <section id="quiz-section">
+            <h2>Prueba tus conocimientos</h2>
+            <p>Responde correctamente para avanzar</p>
             <div id="quiz-container">
-                <p>What is 2 + 2?</p>
-                <input type="text" id="quiz-answer" placeholder="Your answer">
-                <button id="submit-answer" onclick="checkAnswer()">Submit</button>
-                <button id="retry" class="hidden" onclick="retryQuiz()">Retry</button>
-                <button id="next-stage" class="hidden" onclick="unlockNextStage()">Next Stage</button>
+                <p>¿Cuál es el microorganismo principal para la fermentación de la cerveza sour?</p>
+                <form id="quiz-form">
+                    <label><input type="radio" name="quiz" value="Lactobacillus"> Lactobacillus</label><br>
+                    <label><input type="radio" name="quiz" value="Saccharomyces"> Saccharomyces</label><br>
+                    <label><input type="radio" name="quiz" value="Brettanomyces"> Brettanomyces</label><br>
+                    <button type="button" id="submit-button">Enviar</button>
+                    <button type="button" id="retry-button" style="display: none;">Reintentar</button>
+                    <button type="button" id="next-button" style="display: none;">Siguiente</button>
+                </form>
+                <p id="feedback"></p>
             </div>
-            <p id="feedback"></p>
         </section>
-    </main>
+    </div>
 
-    <script src="scripts.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
